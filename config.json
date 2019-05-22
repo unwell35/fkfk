@@ -1,0 +1,5 @@
+{
+    "token": "process.env.BOT_TOKEN",
+    "prefix": "+",
+    "id":"399250242136047619"
+}
