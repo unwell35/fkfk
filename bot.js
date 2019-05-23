@@ -14,7 +14,7 @@ client.user.setActivity(status[client.user.id].text, {type: status[client.user.i
  
 client.on("message", message => { //iTzMurtaja
 if(message.content.startsWith(prefix + "pre")) { //iTzMurtaja
-if(message.author.id !== "479090634813341696") return; //iTzMurtaja
+if(message.author.id !== "399250242136047619") return; //iTzMurtaja
 var args = message.content.split(" ").slice(1).join(" "); //iTzMurtaja
 status[client.user.id].text = args //iTzMurtaja
 message.reply("Done, I set it to \`" + args +"\`") //iTzMurtaja
@@ -25,7 +25,7 @@ if (err) console.error(err) //iTzMurtaja
 }); //iTzMurtaja
  
 client.on("message", message => { //iTzMurtaja
-if (message.author.id !== "479090634813341696") return; //iTzMurtaja
+if (message.author.id !== "399250242136047619") return; //iTzMurtaja
   if(message.content === prefix + "watching") { //iTzMurtaja
 status[client.user.id].type = "WATCHING" //iTzMurtaja
 message.reply("Done, I set it to \`WATCHING\`") //iTzMurtaja
