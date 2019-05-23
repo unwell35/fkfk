@@ -1,1 +1,1 @@
-worker: node rebelac.js
+worker: node bot.js
