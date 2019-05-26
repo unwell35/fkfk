@@ -3,16 +3,27 @@ const client = new Discord.Client();
 const fs = require('fs');
 const status = JSON.parse(fs.readFileSync('./status.json' , 'utf8'));
 const prefix = "+";
+const developers = ['399250242136047619'];
 client.on("ready",() => { //iTzMurtaja
 console.log("Ready!"); //iTzMurtaja
 if(!status[client.user.id]) {status[client.user.id] = {
     text: client.user.tag,
     type: "WATCHING"
 }} //iTzMurtaja
-client.user.setActivity(status[client.user.id].text, {type: status[client.user.id].type})    //iTzMurtaja
+client.user.setGame(`Ma ⁵⁵.♡`,'https://www.twitch.tv/Moha')  //iTzMurtaja
      client.user.setStatus("dnd");
 });
  
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+  
+  if (message.content.startsWith('+st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/Moha");
+     message.channel.send(`Done, I set it to ** ${argresult} \ ** `)
+  }
+  });
+
 client.on("message", message => { //iTzMurtaja
 if(message.content.startsWith(prefix + "pre")) { //iTzMurtaja
 if(message.author.id !== "399250242136047619") return; //iTzMurtaja
