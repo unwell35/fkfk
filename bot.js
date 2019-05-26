@@ -10,6 +10,7 @@ if(!status[client.user.id]) {status[client.user.id] = {
     type: "WATCHING"
 }} //iTzMurtaja
 client.user.setActivity(status[client.user.id].text, {type: status[client.user.id].type})    //iTzMurtaja
+     client.user.setStatus("dnd");
 });
  
 client.on("message", message => { //iTzMurtaja
